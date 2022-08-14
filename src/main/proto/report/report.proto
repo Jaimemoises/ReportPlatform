@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package report;
+
+option java_package = "com.proto.report";
+option  java_multiple_files = true;
+
+import "google/protobuf/empty.proto";
+
+message Report{
+  string id = 1;
+  string employee = 2;
+  string title = 3;
+  string content = 4;
+}
+
+message ReportId{
+  string id = 1;
+}
+
+service ReportService{
+  rpc createReport(Report) returns (ReportId);
+  rpc readReport(ReportId) returns (Report);
+  rpc updateReport (Report) returns (google.protobuf.Empty);
+  rpc deleteReport (ReportId) returns (google.protobuf.Empty);
+  rpc listReports(google.protobuf.Empty) returns (stream Report);
+}
