@@ -17,4 +17,4 @@ A Command Line Interface (CLI) is used to improve code visualisation. The CLI ch
 
 A database called MongoDB was also used, which stores the information added by the user to the platform. With the files on the computer and the project open in IntelliJ it is necessary to start docker, after that start the server, and the client.
 
-Link for the project presentation video:
+Link for the project presentation video: https://youtu.be/LgfNKGgahno
